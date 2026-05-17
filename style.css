@@ -1,0 +1,241 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:black;
+    color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    padding:25px;
+    background-color:rgba(0,0,0,0.55);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:orange;
+}
+
+/* HERO SECTION */
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+    height:85vh;
+    padding:40px;
+}
+
+.hero img{
+    width:420px;
+    border-radius:20px;
+    box-shadow:0px 0px 35px orange;
+    transition:0.4s;
+}
+
+.hero img:hover{
+    transform:scale(1.05);
+}
+
+.hero-text h1{
+    color:#ff3c00;
+    font-size:70px;
+    margin-bottom:10px;
+}
+
+.hero-text p{
+    font-size:22px;
+    color:#ccc;
+    margin-bottom:30px;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    padding:18px 40px;
+    background:orange;
+    color:black;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0px 0px 25px orange;
+}
+
+/* CATALOG */
+
+.catalog-title{
+    text-align:center;
+    margin-top:80px;
+}
+
+.catalog-title h1{
+    font-size:70px;
+    color:orange;
+}
+
+.catalog-title p{
+    font-size:28px;
+    color:#ccc;
+}
+
+.catalog-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:60px;
+    padding-bottom:80px;
+}
+
+.card{
+    background:#111;
+    width:300px;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0px 0px 15px rgba(255,165,0,0.15);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0px 0px 30px orange;
+}
+
+.card img{
+    width:100%;
+    background:white;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h2{
+    color:orange;
+}
+
+.card-content p{
+    color:#ccc;
+    line-height:1.7;
+}
+.main-title{
+    font-size:75px;
+    margin:0;
+    color:rgb(180,20,20);
+    letter-spacing:4px;
+}
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+
+    min-height:85vh;
+
+    padding:0 80px;
+}
+
+.logo{
+    width:420px;
+
+    border-radius:25px;
+
+    box-shadow:0px 0px 40px orange;
+
+    transition:0.4s;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+
+    box-shadow:0px 0px 70px orange;
+}
+
+.hero-text{
+    max-width:550px;
+}
+
+.main-title{
+    font-size:75px;
+
+    color:rgb(255,120,40);
+
+    margin:0;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+}
+
+.sub-title{
+    font-size:30px;
+
+    margin-top:15px;
+
+    color:white;
+
+    letter-spacing:5px;
+}
+
+.description{
+    margin-top:35px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#cccccc;
+}
+
+.catalog-btn{
+    margin-top:35px;
+
+    padding:18px 40px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    background:orange;
+
+    color:black;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0px 0px 25px orange;
+}
+
+.catalog-btn:hover{
+    transform:scale(1.08);
+
+    box-shadow:0px 0px 50px gold;
+}
