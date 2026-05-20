@@ -1,163 +1,145 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-<title>About Us</title>
+    <title>About</title>
+
+    <style>
+
+        body{
+            margin:0;
+            background:#0f0f0f;
+            color:white;
+            font-family:Arial;
+        }
+
+        .navbar{
+            display:flex;
+            justify-content:center;
+            gap:60px;
+            padding:22px;
+
+            position:sticky;
+            top:0;
+
+            background:rgba(0,0,0,0.45);
+            backdrop-filter:blur(12px);
+
+            border-bottom:1px solid rgba(255,165,0,0.15);
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:bold;
+
+            transition:0.3s;
+
+            padding:10px 18px;
+            border-radius:12px;
+
+            display:inline-block;
+        }
+
+        .navbar a:hover{
+            color:orange;
+            background:rgba(255,165,0,0.08);
+            box-shadow:0px 0px 20px rgba(255,165,0,0.4);
+            transform:translateY(-3px);
+        }
+
+        .content{
+            text-align:center;
+            padding:120px 50px;
+            max-width: 1100px
+            margin:auto;
+        }
+
+        h1{
+    font-size:78px;
+
+    color:orange;
+
+    margin-bottom:50px;
+
+    letter-spacing:4px;
+
+    text-shadow:0px 0px 25px rgba(255,165,0,0.45);
+}
+
+        p{
+    font-size:24px;
+
+    color:#d6d6d6;
+
+    line-height:2;
+
+    margin-top:35px;
+
+    letter-spacing:0.5px;
+}
+
+    </style>
+
 </head>
 
-<body style="background-color:black; color:white; font-family:Arial;">
-<!-- NAVBAR -->
+<body>
+
+    <div class="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+    <!-- ABOUT IMAGE -->
 
 <div style="
-display:flex;
-justify-content:center;
-align-items:center;
-gap:60px;
-padding:25px;
-background-color:rgba(0,0,0,0.55);
-backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(255,255,255,0.15);
-position:sticky;
-top:0;
-z-index:999;
+max-width:1100px;
+margin:60px auto 30px auto;
+padding:0 30px;
 ">
 
-<a href="index.html"
-style="text-decoration:none; color:white;">
-
-<p style="
-font-size:18px;
-cursor:pointer;
-transition:0.3s;
-"
-onmouseover="this.style.color='orange'"
-onmouseout="this.style.color='white'">
-
-Home
-
-</p>
-
-</a>
-
-<a href="about.html"
-style="text-decoration:none; color:orange;">
-
-<p style="
-font-size:18px;
-cursor:pointer;
-">
-
-About
-
-</p>
-
-</a>
-
-<a href="catalog.html"
-style="text-decoration:none; color:white;">
-
-<p style="
-font-size:18px;
-cursor:pointer;
-transition:0.3s;
-"
-onmouseover="this.style.color='orange'"
-onmouseout="this.style.color='white'">
-
-Catalog
-
-</p>
-
-</a>
-
-<a href="contact.html"
-style="text-decoration:none; color:white;">
-
-<p style="
-font-size:18px;
-cursor:pointer;
-transition:0.3s;
-"
-onmouseover="this.style.color='orange'"
-onmouseout="this.style.color='white'">
-
-Contact
-
-</p>
-
-</a>
-
-</div>
-<div style="
-text-align:center;
-padding-top:80px;
-">
-
-<img src="about.jpg.jpeg"
-width="800"
+<img src="truck4.jpg.jpeg"
 style="
+width:85%;
+height: 230px;
+object-fit:cover;
 border-radius:20px;
-box-shadow:0px 0px 30px orange;
-">
-<h1 style="
-color:orange;
-margin-top:30px;
-font-size:50px;
-">
-M AVANUE
-</h1>
-
-<p style="
-font-size:22px;
-color:#ccc;
-width:700px;
+box-shadow:0 0 25px rgba(255,165,0,0.18);
+display:block;
 margin:auto;
-line-height:1.8;
 margin-top:20px;
 ">
-M AVANUE is a professional spare parts supplier company specializing in high-quality automotive and heavy vehicle components. 
 
-With a strong commitment to quality, reliability, and customer satisfaction, we provide durable and trusted spare part solutions for workshops, distributors, and businesses across Malaysia.
-
-Our company focuses on delivering excellent service, competitive pricing, and long-term business partnerships. We continuously improve our product range to meet the demands of the modern automotive industry.
-
-At M AVANUE, we believe that trust, consistency, and product quality are the keys to building lasting relationships with our customers.
-
-
-
-M AVANUE 是一家专业汽车与重型车辆零件供应公司，专注于提供高品质、可靠及耐用的重卡零件产品。
-
-我们致力于为全马来西亚的维修厂、经销商以及企业客户提供值得信赖的零件解决方案，并以客户满意度作为核心发展方向。
-
-本公司坚持提供专业服务、合理价格以及长期合作关系，同时不断提升产品种类，以满足现代汽车行业不断变化的需求。
-
-在 M AVANUE，我们相信诚信、稳定品质以及专业服务，是建立长期合作关系最重要的核心价值。
-</p>
+<div class="content" style="
+padding-top:10px;
+max-width:1000px;
+margin:auto;
+text-align:center;
+">
+<h1>ABOUT US</h1>
 
 <p style="
-margin-top:40px;
 font-size:18px;
-color:pink;
+line-height:1.8;
+color:#dddddd;
+margin-top:10px;
 ">
-Trusted Spare Part Solution
+
+M AVANUE 是一家专注于中型卡车与重型车辆零件供应的专业公司，
+致力于为马来西亚市场提供高品质、可靠且耐用的汽车零件解决方案。
+
+We specialize in medium-duty and heavy-duty truck spare parts,
+supplying reliable automotive components with strong focus on quality,
+performance, and long-term customer trust.
+
+我们的产品包括滤芯、避震器、工业开关、重卡零件以及各类商用车配件，
+持续为维修厂、经销商及企业客户提供稳定的供货支持。
+
 </p>
-
-<a href="index.html">
-
-<button style="
-margin-top:40px;
-background-color:rgb(211, 34, 64);
-color:white;
-border:none;
-padding:15px 35px;
-border-radius:10px;
-font-size:18px;
-cursor:pointer;
-box-shadow:0px 0px 20px pink;
-">
-Back Home
-</button>
-
-</a>
 
 </div>
 

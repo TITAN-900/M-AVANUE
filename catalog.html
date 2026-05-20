@@ -1,198 +1,89 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
-<title>Catalog</title>
+    <title>Catalog</title>
+
+   <style>
+
+        body{
+            margin:0;
+            background:#0f0f0f;
+            color:white;
+            font-family:Arial;
+        }
+
+        .navbar{
+            display:flex;
+            justify-content:center;
+            gap:60px;
+            padding:22px;
+
+            position:sticky;
+            top:0;
+
+            background:rgba(0,0,0,0.45);
+            backdrop-filter:blur(12px);
+
+            border-bottom:1px solid rgba(255,165,0,0.15);
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:bold;
+
+            transition:0.3s;
+
+            padding:10px 18px;
+            border-radius:12px;
+
+            display:inline-block;
+        }
+
+        .navbar a:hover{
+            color:orange;
+            background:rgba(255,165,0,0.08);
+            box-shadow:0px 0px 20px rgba(255,165,0,0.4);
+            transform:translateY(-3px);
+        }
+
+        .content{
+            text-align:center;
+            padding:120px 50px;
+        }
+
+        h1{
+            font-size:72px;
+            color:orange;
+        }
+
+        p{
+            font-size:22px;
+            color:#cccccc;
+        }
+
+    </style>
+
 </head>
 
 <body>
-<!-- NAVBAR -->
-<div class="navbar">
 
-<a href="index.html"
-style="text-decoration:none; color:white;">
-<p>Home</p>
-</a>
+    <div class="navbar">
 
-<a href="about.html"
-style="text-decoration:none; color:white;">
-<p>About</p>
-</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="contact.html">Contact</a>
 
-<a href="catalog.html"
-style="text-decoration:none; color:orange;">
-<p>Catalog</p>
-</a>
+    </div>
 
-<a href="contact.html"
-style="text-decoration:none; color:white;">
-<p>Contact</p>
-</a>
+    <div class="content">
 
-</div>
+        <h1>PRODUCT CATALOG</h1>
 
-<!-- TITLE -->
-
-<h1 class="title"
-style="
-font-size:48px;
-text-align:center;
-margin-top:60px;
-letter-spacing:2px;
-">
-PRODUCT CATALOG
-</h1>
-
-<p class="subtitle"
-style="
-text-align:center;
-color:#cccccc;
-margin-bottom:60px;
-font-size:18px;
-">
-Professional Spare Part Collection
-</p>
-
-<!-- PRODUCTS -->
-
-<div style="
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:40px;
-padding:60px;
-">
-
-<!-- CARD 1 -->
-
-<div style="
-width:300px;
-background:#1a1a1a;
-border-radius:25px;
-overflow:hidden;
-transition:0.4s;
-box-shadow:0px 0px 20px rgba(255,165,0,0.2);
-"
-
-onmouseover="
-this.style.transform='translateY(-10px)';
-this.style.boxShadow='0px 0px 40px orange';
-"
-
-onmouseout="
-this.style.transform='translateY(0px)';
-this.style.boxShadow='0px 0px 20px rgba(255,165,0,0.2)';
-"
->
-
-<img src="absorber.jpg.jpg"
-style="
-width:100%;
-height:250px;
-object-fit:cover;
-">
-
-<div style="padding:25px;">
-
-<h2 style="color:orange;">
-ABSORBER
-</h2>
-
-<p style="color:#bbb; line-height:1.7;">
-Heavy-duty absorber designed for maximum durability and smooth performance.
-</p>
-
-</div>
-
-</div>
-
-<!-- CARD 2 -->
-
-<div style="
-width:300px;
-background:#1a1a1a;
-border-radius:25px;
-overflow:hidden;
-transition:0.4s;
-box-shadow:0px 0px 20px rgba(255,165,0,0.2);
-"
-
-onmouseover="
-this.style.transform='translateY(-10px)';
-this.style.boxShadow='0px 0px 40px orange';
-"
-
-onmouseout="
-this.style.transform='translateY(0px)';
-this.style.boxShadow='0px 0px 20px rgba(255,165,0,0.2)';
-"
->
-
-<img src="switch.jpg.jpg"
-style="
-width:100%;
-height:250px;
-object-fit:cover;
-">
-
-<div style="padding:25px;">
-
-<h2 style="color:orange;">
-SWITCH
-</h2>
-
-<p style="color:#bbb; line-height:1.7;">
-Premium industrial switch component with reliable electrical performance.
-</p>
-
-</div>
-
-</div>
-
-<!-- CARD 3 -->
-
-<div style="
-width:300px;
-background:#1a1a1a;
-border-radius:25px;
-overflow:hidden;
-transition:0.4s;
-box-shadow:0px 0px 20px rgba(255,165,0,0.2);
-"
-
-onmouseover="
-this.style.transform='translateY(-10px)';
-this.style.boxShadow='0px 0px 40px orange';
-"
-
-onmouseout="
-this.style.transform='translateY(0px)';
-this.style.boxShadow='0px 0px 20px rgba(255,165,0,0.2)';
-"
->
-
-<img src="part.jpg.jpg"
-style="
-width:100%;
-height:250px;
-object-fit:cover;
-">
-
-<div style="padding:25px;">
-
-<h2 style="color:orange;">
-SPARE PART
-</h2>
-
-<p style="color:#bbb; line-height:1.7;">
-Reliable spare parts suitable for commercial and heavy-duty vehicles.
-</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </body>
 

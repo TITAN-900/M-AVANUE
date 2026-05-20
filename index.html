@@ -4,64 +4,184 @@
 <head>
     <title>M AVANUE</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+        body{
+            margin:0;
+            color:white;
+            font-family:Arial;
+            overflow-x:hidden;
+        }
+
+        .bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-1;
+}
+
+        /* NAVBAR */
+
+        .navbar{
+            position:relative;
+z-index:10;
+            display:flex;
+            justify-content:center;
+            gap:60px;
+
+            padding:22px;
+
+            position:sticky;
+            top:0;
+
+            background:rgba(0,0,0,0.45);
+
+            backdrop-filter:blur(12px);
+
+            border-bottom:1px solid rgba(255,165,0,0.15);
+
+            z-index:999;
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:bold;
+
+            transition:0.3s;
+
+            padding:10px 18px;
+            border-radius:12px;
+
+            display:inline-block;
+        }
+
+        .navbar a:hover{
+            color:orange;
+
+            background:rgba(255,165,0,0.08);
+
+            box-shadow:0px 0px 20px rgba(255,165,0,0.4);
+
+            transform:translateY(-3px);
+        }
+
+        /* HERO */
+
+        .hero{
+            position:relative;
+z-index:10;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:80px;
+
+            padding:100px 60px;
+        }
+
+        .hero img{
+            width:400px;
+            border-radius:25px;
+
+            box-shadow:0px 0px 35px rgba(255,140,0,0.45);
+        }
+
+        .text h1{
+            font-size:72px;
+            color:orange;
+            margin-bottom:10px;
+        }
+
+        .text h2{
+            font-size:42px;
+            margin-bottom:30px;
+            letter-spacing:3px;
+        }
+
+        .text p{
+            color:#cccccc;
+            font-size:20px;
+            line-height:1.8;
+            max-width:650px;
+        }
+
+        button{
+            margin-top:35px;
+
+            background:orange;
+            color:black;
+
+            border:none;
+
+            padding:18px 38px;
+
+            border-radius:14px;
+
+            font-size:18px;
+            font-weight:bold;
+
+            cursor:pointer;
+
+            transition:0.3s;
+
+            box-shadow:0px 0px 20px rgba(255,165,0,0.45);
+        }
+
+        button:hover{
+            transform:translateY(-5px);
+
+            box-shadow:0px 0px 35px orange;
+        }
+
+    </style>
+
 </head>
 
-<body style="
-margin:0;
-font-family:'Poppins',sans-serif;
-background-image:url('background2.jpg.jpeg');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
-overflow-x:hidden;
-color:white;
-">
+<body>
 
-<!-- NAVBAR -->
+    <video autoplay muted loop playsinline class="bg-video">
+    <source src="truck.mp4.mp4" type="video/mp4">
+</video>
 
-<div class="navbar">
+    <!-- NAVBAR -->
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="catalog.html">Catalog</a>
-<a href="contact.html">Contact</a>
+    <div class="navbar">
 
-</div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="contact.html">Contact</a>
 
-<!-- HERO SECTION -->
+    </div>
 
-<div class="hero">
+    <!-- HERO SECTION -->
 
-<img src="logo2.jpg.jpeg" class="logo">
+    <div class="hero">
 
-<div class="hero-text">
+        <img src="logo2.jpg.jpeg">
 
-<h1 class="main-title">
-M AVANUE
-</h1>
+        <div class="text">
 
-<h2 class="sub-title">
-TRUSTED SPARE PART SOLUTION
-</h2>
+            <h1>M AVANUE</h1>
 
-<p class="description">
-Professional heavy-duty spare part supplier focused on quality,
-reliability and long-term trusted partnership across Malaysia.
-</p>
+            <h2>TRUSTED SPARE PART SOLUTION</h2>
 
-<a href="catalog.html">
-<button class="catalog-btn">
-VIEW CATALOG
-</button>
-</a>
+            <p>
+                Professional heavy-duty spare part supplier focused on quality,
+                reliability and long-term trusted partnership across Malaysia.
+            </p>
 
-</div>
 
-</div>
+        </div>
+
+    </div>
 
 </body>
 
