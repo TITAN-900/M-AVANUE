@@ -4,7 +4,6 @@
 <head>
     <title>About</title>
 
-    
     <style>
 
         body{
@@ -52,88 +51,69 @@
 
         .content{
             text-align:center;
-            padding:120px 50px;
-            max-width: 1100px
+            padding:60px 22px;
+            max-width:1100px;
             margin:auto;
         }
 
         h1{
-    font-size:78px;
-
-    color:orange;
-
-    margin-bottom:50px;
-
-    letter-spacing:4px;
-
-    text-shadow:0px 0px 25px rgba(255,165,0,0.45);
-}
+            font-size:72px;
+            color:orange;
+            margin-bottom:40px;
+            letter-spacing:4px;
+            text-shadow:0px 0px 25px rgba(255,165,0,0.45);
+        }
 
         p{
-    font-size:24px;
+            font-size:18px;
+            color:#d6d6d6;
+            line-height:1.9;
+        }
 
-    color:#d6d6d6;
+        .about-image{
+            width:92%;
+            max-width:1000px;
+            display:block;
+            margin:30px auto;
+            border-radius:25px;
+            object-fit:cover;
+            box-shadow:0px 0px 40px rgba(255,0,0,0.18);
+        }
 
-    line-height:2;
+        .location-section{
+            width:85%;
+            margin:70px auto;
+            text-align:center;
+        }
 
-    margin-top:35px;
+        .location-section h2{
+            color:orange;
+            font-size:42px;
+            margin-bottom:25px;
+        }
 
-    letter-spacing:0.5px;
-}
-.location-section{
-    width:85%;
-    margin:70px auto;
-    text-align:center;
-}
+        .company-info{
+            max-width:900px;
+            margin:60px auto;
+            text-align:center;
+        }
 
-.location-section h2{
-    color:orange;
-    font-size:42px;
-    margin-bottom:25px;
-}
+        .company-info h2{
+            color:orange;
+            font-size:38px;
+            margin-bottom:30px;
+        }
 
-.location-section p{
-    color:#ccc;
-    margin-top:20px;
-    line-height:1.8;
-    font-size:18px;
-}
-.company-info{
-    max-width:900px;
-    margin:60px auto;
-    text-align:center;
-    color:white;
-}
+        .company-info p{
+            font-size:18px;
+            line-height:1.8;
+        }
 
-.company-info h2{
-    color:orange;
-    font-size:38px;
-    margin-bottom:30px;
-    text-shadow:0px 0px 20px rgba(255,165,0,0.4);
-}
+        iframe{
+            border-radius:25px;
+        }
 
-.company-info p{
-    font-size:18px;
-    line-height:1.8;
-    color:#d6d6d6;
-    margin-bottom:25px;
-}
-.about-image{
-    width:200%;
-
-    max-width:1000px;
-
-    display:block;
-
-object-fit: cover;
-
-    margin:40px auto;
-
-    border-radius:25px;
-
-    box-shadow:0px 0px 40px rgba(255,0,0,0.18);
-}
-@media(max-width:768px)
+        @media(max-width:768px){
 
     .navbar{
         gap:25px;
@@ -150,27 +130,16 @@ object-fit: cover;
 
     p{
         font-size:15px !important;
-        line-height:1.6;
+        line-height:1.7 !important;
     }
 
-    .hero{
-        padding:120px 20px;
-        text-align:center;
+    .about-image{
+        width:92% !important;
+        display:block;
+        margin: 30px auto;
     }
 
-    .hero img{
-        width:180px !important;
-    }
-
-    .content{
-        width:90% !important;
-    }
-
-    iframe{
-        width:90% !important;
-        height:250px !important;
-    }
-
+}
 
     </style>
 
@@ -186,43 +155,28 @@ object-fit: cover;
         <a href="contact.html">Contact</a>
 
     </div>
-    <!-- ABOUT IMAGE -->
 
-<div style="
-max-width:1100px;
-margin:60px auto 30px auto;
-padding:0 30px;
-">
+    <div class="content">
 
-<img src="item4.jpg.jpeg"
+        <img src="item4.jpg.jpeg"
+
+        class="about-image"
+
 style="
-width:85%;
-height: 600px;
-object-fit:cover;
-object-position:center 70%;
-border-radius:20px;
-box-shadow:0 0 25px rgba(255,165,0,0.18);
+width:75%;
+max-width:950px;
 display:block;
-margin:auto;
-margin-top:20px;
+margin:20px auto 50px auto;
+border-radius:25px;
+box-shadow:0px 0px 40px rgba(255,140,0,0.18);
+object-fit:cover;
 ">
 
-<div class="content" style="
-padding-top:10px;
-max-width:1000px;
-margin:auto;
-text-align:center;
-">
-<h1>ABOUT US</h1>
+        <h1>ABOUT US</h1>
 
-<p style="
-font-size:18px;
-line-height:1.8;
-color:#dddddd;
-margin-top:10px;
-">
+        <p>
 
-M AVANUE 是一家专注于中型卡车与重型车辆零件供应的专业公司，
+        M AVANUE 是一家专注于中型卡车与重型车辆零件供应的专业公司，
 主要提供 U-Bolt、车轮螺丝、悬挂系统零件以及重卡弹簧相关产品。
 
 我们致力于为马来西亚市场提供高品质、耐用且可靠的重卡零件解决方案，
@@ -231,7 +185,11 @@ M AVANUE 是一家专注于中型卡车与重型车辆零件供应的专业公�
 凭借稳定的产品品质、专业的服务态度以及长期合作理念，
 M AVANUE 持续为客户提供值得信赖的重型车辆零件支持。
 
-<br><br>
+        </p>
+
+        <br><br>
+
+        <p>
 
 M AVANUE is a professional supplier specializing in medium-duty and heavy-duty truck spare parts,
 with strong focus on U-Bolts, wheel bolts, suspension components, and heavy vehicle spring systems.
@@ -242,55 +200,53 @@ for workshops, distributors, and commercial transport industries across Malaysia
 With consistent product quality, professional service, and long-term business support,
 M AVANUE continues to provide trusted heavy-duty spare part solutions for our customers.
 
-</p>
-<img src="shopfront.jpg.jpeg" class="about-image">
-</div>
+        </p>
 
-<div class="location-section">
+        <img src="shopfront.jpg.jpeg" class="about-image">
 
-<h2>OUR LOCATION</h2>
+    </div>
 
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6229261368576!2d101.66784447473049!3d3.193388496781861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc47d7a8b6eb9b%3A0x19a952e4fc0e5528!2sNihon%20Asia%20Enterprise%20Sdn%20Bhd!5e0!3m2!1szh-CN!2smy!4v1779550608928!5m2!1szh-CN!2smy"
+    <div class="location-section">
 
-width="100%" 
-height="350" 
-style="border:0; border-radius:25px;"
-allowfullscreen="" 
-loading="lazy">
-</iframe>
-<div class="company-info">
+        <h2>OUR LOCATION</h2>
 
-<h2>CONTACT INFORMATION</h2>
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6229261368576!2d101.66784447473049!3d3.193388496781861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc47d7a8b6eb9b%3A0x19a952e4fc0e5528!2sNihon%20Asia%20Enterprise%20Sdn%20Bhd!5e0!3m2!1szh-CN!2smy!4v1779550608928!5m2!1szh-CN!2smy"
+        width="100%" 
+        height="350" 
+        style="border:0;"
+        allowfullscreen="" 
+        loading="lazy">
+        </iframe>
 
-<p>
+    </div>
+
+    <div class="company-info">
+
+        <h2>CONTACT INFORMATION</h2>
+
+        <p>
 📍 Address:<br>
-8, Jalan 3/46a, Jalan Selingsing 7, Taman Niaga Waris, 51200 Kuala Lumpur,  <br>
+8, Jalan 3/46a, Jalan Selingsing 7, Taman Niaga Waris, 51200 Kuala Lumpur,
 Federal Territory of Kuala Lumpur, Malaysia
-</p>
+        </p>
 
-<p>
+        <p>
 📞 WhatsApp:<br>
 +60 16-712 3232
-</p>
+        </p>
 
-<p>
+        <p>
 ✉ Email:<br>
 -
-</p>
+        </p>
 
-<p>
+        <p>
 🕘 Business Hours:<br>
 Mon - Sat | 9:00AM - 6:00PM
-</p>
+        </p>
 
-</div>
-<p>
-M AVANUE SDN BHD<br>
-Malaysia
-</p>
-
-</div>
+    </div>
 
 </body>
 
