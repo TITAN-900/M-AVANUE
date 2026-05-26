@@ -63,7 +63,154 @@
             font-size:22px;
             color:#cccccc;
         }
+@media(max-width:768px){
 
+    .navbar{
+        gap:25px;
+        padding:18px;
+    }
+
+    .navbar a{
+        font-size:15px;
+    }
+
+    h1{
+        font-size:48px !important;
+    }
+
+    p{
+        font-size:15px !important;
+        line-height:1.6;
+    }
+
+    .hero{
+        padding:120px 20px;
+        text-align:center;
+    }
+
+    .hero img{
+        width:180px !important;
+    }
+
+    .content{
+        width:90% !important;
+    }
+
+    iframe{
+        width:90% !important;
+        height:250px !important;
+    }
+
+}
+.catalog-section{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.catalog-section h1{
+    font-size:72px;
+    color:orange;
+    margin-bottom:70px;
+    text-shadow:0 0 25px rgba(255,165,0,0.35);
+}
+
+.product-grid{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    align-items:flex-start;
+}
+
+.product-card{
+    width: 900px;
+
+    background: rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,165,0,0.15);
+
+    border-radius:25px;
+
+    padding: 30px 40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+
+    gap:60px;
+
+    backdrop-filter:blur(10px);
+
+    transition:0.4s;
+
+    margin:auto;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 35px rgba(255,165,0,0.25);
+}
+
+.product-card img{
+    width:320px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+}
+.product-info{
+flex:1;
+    
+    text-align:left;
+
+    max: width:700px;
+    width:100;
+}
+
+.product-card h2{
+    color:orange;
+    margin-top:25px;
+    font-size:42px;
+}
+
+.product-card p{
+    font-size:22px;
+    color:#d6d6d6;
+    line-height:1.8;
+    padding:0 25px;
+}
+
+.product-card a{
+    display:inline-block;
+    margin-top:20px;
+    padding:16px 34px;
+    border-radius:12px;
+    background:orange;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    font-size: 20px;
+
+    transition:0.3s;
+}
+
+.product-card a:hover{
+    background:white;
+}
+.catalog-section{
+    padding:90px 20px;
+}
+
+.catalog-section h1{
+    font-size:46px;
+}
+
+.product-card{
+    width:100%;
+}
     </style>
 
 </head>
@@ -78,7 +225,36 @@
         <a href="contact.html">Contact</a>
 
     </div>
+<div class="catalog-section">
 
+    <h1>OUR PRODUCTS</h1>
+
+    <div class="product-grid">
+
+        <div class="product-card fade-in">
+
+            <img src="ubolt.jpg.jpeg">
+
+        <div class="product-info">
+
+    <h2>U-BOLT</h2>
+
+    <p>
+Heavy-duty truck suspension and fastening solution
+designed for durability and long-term performance.
+
+Manufactured with high-grade steel and precision
+threading, our U-bolts provide exceptional strength,
+corrosion resistance, and reliability under heavy-duty
+road conditions.
+</p>
+    <a href="ubolt.html">VIEW MORE</a>
+
+</div>
+
+    </div>
+
+</div>
     <div class="content">
 
         <h1>PRODUCT CATALOG</h1>

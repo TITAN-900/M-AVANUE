@@ -140,8 +140,18 @@
     }
 
 }
+.fade-in{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1.2s ease;
+}
 
-    </style>
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+</style>
 
 </head>
 
@@ -202,11 +212,11 @@ M AVANUE continues to provide trusted heavy-duty spare part solutions for our cu
 
         </p>
 
-        <img src="shopfront.jpg.jpeg" class="about-image">
+        <img src="shopfront.jpg.jpeg" class="about-image fade-in">
 
     </div>
 
-    <div class="location-section">
+    <div class="location-section fade-in">
 
         <h2>OUR LOCATION</h2>
 
@@ -221,7 +231,7 @@ M AVANUE continues to provide trusted heavy-duty spare part solutions for our cu
 
     </div>
 
-    <div class="company-info">
+    <div class="company-info fade-in">
 
         <h2>CONTACT INFORMATION</h2>
 
@@ -247,7 +257,29 @@ Mon - Sat | 9:00AM - 6:00PM
         </p>
 
     </div>
+<script>
 
+const fadeElements = document.querySelectorAll('.fade-in');
+
+function checkFade(){
+
+    fadeElements.forEach((el)=>{
+
+        const top = el.getBoundingClientRect().top;
+
+        if(top < window.innerHeight - 100){
+            el.classList.add('show');
+        }
+
+    });
+
+}
+
+window.addEventListener('scroll', checkFade);
+
+checkFade();
+
+</script>
 </body>
 
 </html>
