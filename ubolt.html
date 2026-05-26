@@ -15,23 +15,48 @@ body{
 }
 
 .navbar{
-    display:flex;
-    justify-content:center;
-    gap:60px;
-    padding:22px;
+            position:relative;
+z-index:5;
+        display:flex;
+            justify-content:center;
+            gap: 60px;px;
+            padding:22px;
 
-    background:rgba(0,0,0,0.45);
-    backdrop-filter:blur(12px);
+            position:sticky;
+            top:0;
 
-    position:sticky;
-    top:0;
-}
+            background:rgba(0,0,0,0.45);
 
-.navbar a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
+            backdrop-filter:blur(12px);
+
+            border-bottom:1px solid rgba(255,165,0,0.15);
+
+            z-index:999;
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:bold;
+
+            transition:0.3s;
+
+            padding:10px 18px;
+            border-radius:12px;
+
+            display:inline-block;
+        }
+
+        .navbar a:hover{
+            color:orange;
+
+            background:rgba(255,165,0,0.08);
+
+            box-shadow:0px 0px 20px rgba(255,165,0,0.4);
+
+            transform:translateY(-3px);
+        }
 
 .product-detail{
     max-width:1200px;
@@ -77,7 +102,98 @@ body{
 
     font-weight:bold;
 }
+.product-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
 
+    padding:60px 40px;
+}
+
+.product-box{
+    width:260px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,165,0,0.15);
+
+    border-radius:22px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:0.4s;
+
+    backdrop-filter:blur(10px);
+}
+
+.product-box:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px rgba(255,165,0,0.25);
+}
+
+.product-box img{
+    width:100%;
+    height:220px;
+
+    object-fit:contain;
+
+    border-radius:15px;
+}
+
+.product-box h2{
+    color:orange;
+    margin-top:20px;
+}
+
+.product-box p{
+    color:#d6d6d6;
+    font-size:15px;
+}
+
+.popup{
+    display:none;
+
+    position:fixed;
+
+    z-index:9999;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.9);
+
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-img{
+    max-width:85%;
+    max-height:85%;
+
+    border-radius:20px;
+
+    box-shadow:0 0 40px rgba(255,165,0,0.35);
+}
+
+.close{
+    position:absolute;
+
+    top:30px;
+    right:40px;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+}
 @media(max-width:768px){
 
 .product-detail{
@@ -103,42 +219,58 @@ body{
 
 <div class="navbar">
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="catalog.html">Catalog</a>
-<a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
 
 </div>
+<div class="product-grid">
 
-<div class="product-detail">
+    <div class="product-box">
+<img src="ub16729.jpg.jpeg" onclick="openPopup(this.src)">       
+ <h2>UB-16x72x9</h2>
+        <p>U-BOLT & NUT 16X72X9" V99 G-S</p>
+    </div>
 
-<img src="item4.jpg.jpeg">
+    <div class="product-box">
+        <img src="ub147211.jpg.jpeg"onclick="openPopup(this.src)"">
+        <h2>UB-14x72x11</h2>
+        <p>U-BOLT & NUT 14x72x11" V57 G-S</p>
+    </div>
 
-<div class="product-info">
-
-<h1>U-BOLT</h1>
-
-<p>
-
-Heavy-duty U-Bolt designed for medium-duty and heavy-duty trucks.
-
-Manufactured for high durability, strong fastening performance,
-and long-term suspension stability across commercial transport usage.
-
-Suitable for heavy truck suspension systems and industrial applications.
-
-</p>
-
-<a href="https://wa.me/60167123232" class="whatsapp-btn">
-
-WHATSAPP US
-
-</a>
+    <div class="product-box">
+        <img src="ubolt3.jpg">
+        <h2>U-BOLT & NUT 16X72X9" V99 G-S</h2>
+        <p>Industrial grade heavy-load fastening.</p>
+    </div>
 
 </div>
+<div id="popup" class="popup">
+
+    <span class="close">&times;</span>
+
+    <img class="popup-img" id="popup-img">
 
 </div>
+<script>
 
+function openPopup(src){
+
+    document.getElementById("popup").style.display="flex";
+
+    document.getElementById("popup-img").src=src;
+}
+
+document.querySelector(".close").onclick=function(){
+
+    document.getElementById("popup").style.display="none";
+}
+
+</script>
 </body>
 
 </html>
