@@ -13,19 +13,24 @@
             font-family:Arial;
         }
 
-        .navbar{
-            display:flex;
+           .navbar{
+            position:relative;
+z-index:5;
+        display:flex;
             justify-content:center;
-            gap:60px;
+            gap: 60px;px;
             padding:22px;
 
             position:sticky;
             top:0;
 
             background:rgba(0,0,0,0.45);
+
             backdrop-filter:blur(12px);
 
             border-bottom:1px solid rgba(255,165,0,0.15);
+
+            z-index:999;
         }
 
         .navbar a{
@@ -44,8 +49,11 @@
 
         .navbar a:hover{
             color:orange;
+
             background:rgba(255,165,0,0.08);
+
             box-shadow:0px 0px 20px rgba(255,165,0,0.4);
+
             transform:translateY(-3px);
         }
 
@@ -157,7 +165,9 @@
 
 <body>
 
-    <div class="navbar">
+        <div class="navbar">
+
+        
 
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -173,7 +183,7 @@
         class="about-image"
 
 style="
-width:75%;
+width:75%;   
 max-width:950px;
 display:block;
 margin:20px auto 50px auto;

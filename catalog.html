@@ -13,22 +13,26 @@
             font-family:Arial;
         }
 
-        .navbar{
-            display:flex;
+           .navbar{
+            position:relative;
+z-index:5;
+        display:flex;
             justify-content:center;
-            gap:60px;
+            gap: 60px;
             padding:22px;
 
             position:sticky;
             top:0;
 
             background:rgba(0,0,0,0.45);
+
             backdrop-filter:blur(12px);
 
             border-bottom:1px solid rgba(255,165,0,0.15);
-        }
 
-        .navbar a{
+            z-index:999;
+        }
+.navbar a{
             color:white;
             text-decoration:none;
             font-size:18px;
@@ -44,11 +48,14 @@
 
         .navbar a:hover{
             color:orange;
+
             background:rgba(255,165,0,0.08);
+
             box-shadow:0px 0px 20px rgba(255,165,0,0.4);
+
             transform:translateY(-3px);
         }
-
+       
         .content{
             text-align:center;
             padding:120px 50px;
@@ -166,7 +173,7 @@ flex:1;
     
     text-align:left;
 
-    max: width:700px;
+    max-width:700px;
     width:100;
 }
 
@@ -217,7 +224,8 @@ flex:1;
 
 <body>
 
-    <div class="navbar">
+ <div class="navbar">
+
 
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -225,6 +233,8 @@ flex:1;
         <a href="contact.html">Contact</a>
 
     </div>
+       
+
 <div class="catalog-section">
 
     <h1>OUR PRODUCTS</h1>
