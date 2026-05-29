@@ -194,6 +194,37 @@ z-index:5;
 
     cursor:pointer;
 }
+
+.search-box{
+    text-align:center;
+    margin-top:40px;
+}
+
+.search-box input{
+    width:320px;
+
+    padding:16px 22px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,0.08);
+
+    color:white;
+
+    font-size:18px;
+
+    outline:none;
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,165,0,0.18);
+}
+
+.search-box input::placeholder{
+    color:#bbbbbb;
+}
 @media(max-width:768px){
 
 .product-detail{
@@ -215,6 +246,35 @@ z-index:5;
 
 </head>
 
+<script>
+
+function searchProduct(){
+
+    let input =
+        document.getElementById("searchInput").value.toLowerCase();
+
+    let products =
+        document.querySelectorAll(".product-box");
+
+    products.forEach(function(product){
+
+        let text =
+            product.innerText.toLowerCase();
+
+        if(text.includes(input)){
+
+            product.style.display = "block";
+
+        }else{
+
+            product.style.display = "none";
+        }
+
+    });
+}
+
+</script>
+
 <body>
 
 <div class="navbar">
@@ -228,6 +288,14 @@ z-index:5;
 
 
 </div>
+<div class="search-box">
+
+    <input type="text"
+           id="searchInput"
+           placeholder="Search Product..."
+           onkeyup="searchProduct()">
+
+</div>
 <div class="product-grid">
 
     <div class="product-box">
@@ -237,17 +305,28 @@ z-index:5;
     </div>
 
     <div class="product-box">
-        <img src="ub147211.jpg.jpeg"onclick="openPopup(this.src)"">
+        <img src="ub147211.jpg.jpeg"onclick="openPopup(this.src)"> 
         <h2>UB-14x72x11</h2>
         <p>U-BOLT & NUT 14x72x11" V57 G-S</p>
     </div>
 
     <div class="product-box">
-        <img src="ubolt3.jpg">
-        <h2>U-BOLT & NUT 16X72X9" V99 G-S</h2>
-        <p>Industrial grade heavy-load fastening.</p>
+        <img src="ub167210.jpg.jpeg"onclick="openPopup(this.src)"> 
+        <h2>UB-16X72X10</h2>
+        <p>U-BOLT & NUT 16X72X10" V99 NPR G-S</p>
     </div>
 
+    <div class="product-box">
+        <img src="ub147215.jpg.jpeg"onclick="openPopup(this.src)"> 
+        <h2>UB-14X72X15</h2>
+        <p>U-BOLT & NUT 14X72X15" V57 G-S</p>
+    </div>
+
+    <div class="product-box">
+        <img src="ub16726.jpg.jpeg"onclick="openPopup(this.src)"> 
+        <h2>UB-16X72X6</h2>
+        <p>U-BOLT & NUT 16X72X6" V99 NPR G-S</p>
+    </div>
 </div>
 <div id="popup" class="popup">
 
