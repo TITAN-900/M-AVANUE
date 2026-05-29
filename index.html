@@ -3,16 +3,16 @@
 
 <head>
     <title>M AVANUE</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
 
         body{
             margin:0;
             color:white;
-            font-family:Arial;
+font-family:'Montserrat', sans-serif;
             overflow-x:hidden;
         }
-
         .bg-video{
     position:fixed;
     top:0;
@@ -39,12 +39,12 @@
 }
         /* NAVBAR */
 
-        .navbar{
+       .navbar{
             position:relative;
 z-index:5;
-            display:flex;
+        display:flex;
             justify-content:center;
-            gap: 60px;px;
+            gap: 60px;
             padding:22px;
 
             position:sticky;
@@ -243,6 +243,138 @@ letter-spacing:1px;
 
             box-shadow:0px 0px 35px orange;
         }
+
+        body{
+    background:black;
+}
+
+.bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-3;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.45);
+
+    z-index:-2;
+}
+
+.hero{
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:110px;
+
+    font-family:'Montserrat', sans-serif;
+
+    font-weight:900;
+
+    letter-spacing:-4px;
+
+    line-height:0.9;
+}
+
+.hero p{
+    font-size:22px;
+
+    color:#d0d0d0;
+
+    max-width:700px;
+
+    line-height:1.7;
+
+    margin-bottom:40px;
+}
+
+.hero a{
+    padding:18px 38px;
+
+    background:orange;
+
+    color:black;
+
+    text-decoration:none;
+
+    border-radius:14px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.hero a:hover{
+    transform:translateY(-4px);
+
+    background:white;
+}
+
+.hero h1{
+    animation:fadeUp 1.2s ease;
+}
+
+.hero p{
+    animation:fadeUp 1.8s ease;
+}
+
+.hero a{
+    animation:fadeUp 2.2s ease;
+}
+
+.scroll-text{
+    position:absolute;
+
+    bottom:35px;
+
+    color:white;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    opacity:0.6;
+
+    animation:float 2s infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
 @media(max-width:768px){
 
     .navbar{
@@ -250,8 +382,16 @@ letter-spacing:1px;
         padding:18px;
         padding-left:12px;
 padding-right:12px;
-    }
+position:fixed;
+top:0;
+left:0;
+width:100%;
 
+z-index:999;
+background:rgba(0,0,0,0.35);
+
+backdrop-filter:blur(8px);
+    }
     .navbar a{
         font-size:15px;
     }
@@ -288,7 +428,12 @@ padding-right:12px;
 .hero-text{
 animation:fadeUp 1.5s ease;
 
-background:rgba(0,0,0,0.45);
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,0.65),
+transparent
+);
+
 backdrop-filter:blur(12px);
 
 padding:35px;
@@ -362,48 +507,47 @@ left:180%;
 
 <body>
 
-    <video autoplay muted loop playsinline class="bg-video">
-    <source src="truck.mp4.mp4" type="video/mp4">
+<video autoplay muted loop playsinline class="bg-video">
+    <source src="truck1.mp4.mp4" type="video/mp4">
 </video>
-<div class="video-overlay"></div>
-    <!-- NAVBAR -->
 
-    <div class="navbar">
-
-        <div class="logo-area">
-    <div class="logo-text">M AVANUE</div>
-    <div class="logo-sub">SPARE PART SUPPLY</div>
-</div>
-
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="catalog.html">Catalog</a>
-        <a href="contact.html">Contact</a>
-
-    </div>
-
-    <!-- HERO SECTION -->
-
-    <div class="hero">
-
-        <img src="logo2.jpg.jpeg">
-
-        <div class="hero-text">
-
-            <h1>M AVANUE</h1>
-
-            <h2>TRUSTED SPARE PART SOLUTION</h2>
-
-            <p>
-                Professional heavy-duty spare part supplier focused on quality,
-                reliability and long-term trusted partnership across Malaysia.
-            </p>
-
-
+<div class="overlay"></div>
+<div class="navbar">
+    <div class="logo-area">
+        <div class="logo-text">
+            M AVANUE
         </div>
-
+        <div class="logo-sub">
+            SPARE PART SUPPLY
+        </div>
     </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="contact.html">Contact</a>
+</div>
+<div class="hero">
 
+    <h1>
+       PRECISION<br>
+IN EVERY<br>
+LOAD <br>
+        
+    </h1>
+
+    <p>
+Premium heavy-duty suspension and fastening
+solutions engineered for durability,
+strength, and industrial performance.
+</p>
+    <a href="catalog.html">
+        VIEW CATALOG
+    </a>
+
+</div>
+<div class="scroll-text">
+    SCROLL DOWN
+</div>
 </body>
 
 </html>
