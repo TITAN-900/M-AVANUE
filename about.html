@@ -121,22 +121,34 @@ z-index:5;
             border-radius:25px;
         }
 
-        .fade-section{
-
+      .fade-section{
     opacity:0;
-
-    transform:translateY(80px);
-
-    transition:all 1s ease;
+    transform:translateY(120px) scale(0.96);
+    filter:blur(10px);
+    transition:
+    opacity 1.4s ease,
+    transform 1.4s ease,
+    filter 1.4s ease;
 }
-
 .fade-section.show{
-
     opacity:1;
-
-    transform:translateY(0px);
+    transform:translateY(0px) scale(1);
+    filter:blur(0px);
+} 
+.hero-about{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
 }
-
+.about-hero-image{
+    width:88%;
+    max-width:1400px;
+    border-radius:30px;
+    object-fit:cover;
+    box-shadow:0 0 50px rgba(255,140,0,0.15);
+}
         @media(max-width:768px){
 
     .navbar{
@@ -163,16 +175,6 @@ z-index:5;
         margin: 30px auto;
     }
 
-}
-.fade-in{
-    opacity:0;
-    transform:translateY(60px);
-    transition:all 1.2s ease;
-}
-
-.fade-in.show{
-    opacity:1;
-    transform:translateY(0);
 }
 
 .fade-section{
@@ -207,21 +209,11 @@ z-index:5;
 
     </div>
 
-    <div class="content fade-section">
+    <div class="hero-about fade-section">
+    <img src="item4.jpg.jpeg" class="about-hero-image">
+</div>
 
-        <img src="item4.jpg.jpeg"
-
-        class="about-image"
-
-style="
-width:75%;   
-max-width:950px;
-display:block;
-margin:20px auto 50px auto;
-border-radius:25px;
-box-shadow:0px 0px 40px rgba(255,140,0,0.18);
-object-fit:cover;
-">
+<div class="content fade-section">
 
         <h1>WHO WE ARE</h1>
 
@@ -257,7 +249,7 @@ M AVANUE continues to provide trusted heavy-duty spare part solutions for our cu
 
     </div>
 
-    <div class="location-section fade-in">
+    <div class="location-section fade-section">
 
         <h2>OUR LOCATION</h2>
 
@@ -272,7 +264,7 @@ M AVANUE continues to provide trusted heavy-duty spare part solutions for our cu
 
     </div>
 
-    <div class="company-info fade-in">
+    <div class="company-info fade-section">
 
         <h2>CONTACT INFORMATION</h2>
 
@@ -298,29 +290,7 @@ Mon - Sat | 9:00AM - 6:00PM
         </p>
 
     </div>
-<script>
 
-const fadeElements = document.querySelectorAll('.fade-in');
-
-function checkFade(){
-
-    fadeElements.forEach((el)=>{
-
-        const top = el.getBoundingClientRect().top;
-
-        if(top < window.innerHeight - 100){
-            el.classList.add('show');
-        }
-
-    });
-
-}
-
-window.addEventListener('scroll', checkFade);
-
-checkFade();
-
-</script>
 <script>
 
 const sections = document.querySelectorAll('.fade-section');
