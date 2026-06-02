@@ -12,20 +12,24 @@
             color:white;
             font-family:Arial;
         }
-
-        .navbar{
-            display:flex;
+   .navbar{
+            position:relative;
+z-index:5;
+        display:flex;
             justify-content:center;
-            gap:60px;
+            gap: 60px;px;
             padding:22px;
 
             position:sticky;
             top:0;
 
             background:rgba(0,0,0,0.45);
+
             backdrop-filter:blur(12px);
 
             border-bottom:1px solid rgba(255,165,0,0.15);
+
+            z-index:999;
         }
 
         .navbar a{
@@ -44,10 +48,14 @@
 
         .navbar a:hover{
             color:orange;
+
             background:rgba(255,165,0,0.08);
+
             box-shadow:0px 0px 20px rgba(255,165,0,0.4);
+
             transform:translateY(-3px);
         }
+        
 
         .content{
             text-align:center;
@@ -63,6 +71,24 @@
             font-size:22px;
             color:#cccccc;
         }
+
+        .contact-hero::before{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+height:500px;
+
+background:rgba(255,140,0,0.08);
+
+filter:blur(120px);
+
+border-radius:50%;
+
+z-index:-1;
+}
 @media(max-width:768px){
 
     .navbar{
@@ -101,6 +127,145 @@
         height:250px !important;
     }
 
+     }
+.contact-hero{
+
+    min-height:55vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+.contact-hero h1{
+
+    font-size:90px;
+
+    line-height:0.9;
+
+    color:white;
+
+    margin-bottom:25px;
+}
+
+.contact-hero p{
+
+    max-width:700px;
+
+    font-size:20px;
+
+    color:#d0d0d0;
+}
+
+.contact-container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    gap:30px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    padding-bottom:80px;
+}
+
+.contact-card{
+
+    flex:1;
+
+    min-width:260px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,165,0,0.15);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    backdrop-filter:blur(10px);
+
+    transition:0.4s;
+}
+
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 35px rgba(255,140,0,0.2);
+}
+
+.contact-card h2{
+
+    color:orange;
+
+    margin-bottom:20px;
+}
+
+.contact-card p{
+
+    color:#d6d6d6;
+
+    line-height:1.8;
+}
+
+.contact-card a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:16px 30px;
+
+    background:orange;
+
+    color:black;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.contact-card a:hover{
+
+    background:white;
+}
+
+.map-section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:80px auto;
+}
+
+.map-section iframe{
+
+    border-radius:30px;
+}
+
 }
     </style>
 
@@ -108,7 +273,9 @@
 
 <body>
 
-    <div class="navbar">
+        <div class="navbar">
+
+        
 
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -117,13 +284,70 @@
 
     </div>
 
-    <div class="content">
+    <div class="contact-hero">
 
-        <h1>CONTACT US</h1>
+    <h1>
+        LET'S BUILD<br>
+        TOGETHER
+    </h1>
 
-        <p>WhatsApp: +60 XX-XXXX XXX</p>
+    <p>
+        Get in touch with us for premium
+        heavy-duty truck spare part solutions.
+    </p>
+
+</div>
+
+<div class="contact-container">
+
+    <div class="contact-card">
+
+        <h2>WHATSAPP</h2>
+
+        <p>+60 16-712 3232</p>
+
+        <a href="https://wa.me/60167123232">
+            CHAT WITH US
+        </a>
 
     </div>
+
+    <div class="contact-card">
+
+        <h2>LOCATION</h2>
+
+        <p>
+        Kuala Lumpur, Malaysia
+        </p>
+
+    </div>
+
+    <div class="contact-card">
+
+        <h2>BUSINESS HOURS</h2>
+
+        <p>
+        Mon - Sat<br>
+        9:00AM - 6:00PM
+        </p>
+
+    </div>
+
+</div>
+
+<div class="map-section">
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6229261368576!2d101.66784447473049!3d3.193388496781861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc47d7a8b6eb9b%3A0x19a952e4fc0e5528!2sNihon%20Asia%20Enterprise%20Sdn%20Bhd!5e0!3m2!1szh-CN!2smy!4v1779550608928!5m2!1szh-CN!2smy"
+width="100%" 
+height="400" 
+style="border:0;"
+allowfullscreen="" 
+loading="lazy">
+
+</iframe>
+
+</div>
 
 </body>
 
