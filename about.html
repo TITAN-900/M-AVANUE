@@ -2,10 +2,14 @@
 <html>
 
 <head>
+
     <title>About</title>
 
-    <style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <style>
         body{
             margin:0;
             background:#0f0f0f;
@@ -121,20 +125,6 @@ z-index:5;
             border-radius:25px;
         }
 
-      .fade-section{
-    opacity:0;
-    transform:translateY(120px) scale(0.96);
-    filter:blur(10px);
-    transition:
-    opacity 1.4s ease,
-    transform 1.4s ease,
-    filter 1.4s ease;
-}
-.fade-section.show{
-    opacity:1;
-    transform:translateY(0px) scale(1);
-    filter:blur(0px);
-} 
 .hero-about{
     min-height:auto;
     display:flex;
@@ -187,23 +177,6 @@ z-index:5;
 
     border-radius:0px;
 }
-}
-
-.fade-section{
-
-    opacity:0;
-
-    transform:translateY(80px);
-
-    transition:all 1s ease;
-}
-
-.fade-section.show{
-
-    opacity:1;
-
-    transform:translateY(0px);
-}
 </style>
 
 </head>
@@ -221,11 +194,7 @@ z-index:5;
 
     </div>
 
-    <div class="hero-about fade-section">
-    <img src="item4.jpg.jpeg" class="about-hero-image">
-</div>
-
-<div class="content fade-section">
+<div class="content ">
 
         <h1>WHO WE ARE</h1>
 
@@ -256,12 +225,14 @@ With consistent product quality, professional service, and long-term business su
 M AVANUE continues to provide trusted heavy-duty spare part solutions for our customers.
 
         </p>
-
+ <div class="hero-about">
+    <img src="item4.jpg.jpeg" class="about-hero-image">
+</div>
         <img src="shopfront.jpg.jpeg" class="about-image fade-in">
 
     </div>
 
-    <div class="location-section fade-section">
+    <div class="location-section ">
 
         <h2>OUR LOCATION</h2>
 
@@ -276,7 +247,7 @@ M AVANUE continues to provide trusted heavy-duty spare part solutions for our cu
 
     </div>
 
-    <div class="company-info fade-section">
+    <div class="company-info ">
 
         <h2>CONTACT INFORMATION</h2>
 
@@ -305,24 +276,60 @@ Mon - Sat | 9:00AM - 6:00PM
 
 <script>
 
-const sections = document.querySelectorAll('.fade-section');
+gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener('scroll', () => {
+gsap.from(".about-hero-image",{
 
-    sections.forEach(section => {
+    scale:1.15,
+    opacity:0,
+    duration:2,
 
-        const sectionTop = section.getBoundingClientRect().top;
-
-        if(sectionTop < window.innerHeight - 100){
-
-            section.classList.add('show');
-
-        }
-
-    });
+    scrollTrigger:{
+        trigger:".about-hero-image",
+        start:"top 80%"
+    }
 
 });
-window.dispatchEvent(new Event('scroll'));
+
+gsap.from(".content",{
+
+    y:120,
+    opacity:0,
+    duration:1.5,
+
+    scrollTrigger:{
+        trigger:".content",
+        start:"top 75%"
+    }
+
+});
+
+gsap.from(".location-section",{
+
+    y:100,
+    opacity:0,
+    duration:1.5,
+
+    scrollTrigger:{
+        trigger:".location-section",
+        start:"top 75%"
+    }
+
+});
+
+gsap.from(".company-info",{
+
+    y:100,
+    opacity:0,
+    duration:1.5,
+
+    scrollTrigger:{
+        trigger:".company-info",
+        start:"top 75%"
+    }
+
+});
+
 </script>
 </body>
 
